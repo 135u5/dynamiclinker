@@ -1,0 +1,76 @@
+loopback.o loopback.o: ../../../../../src/mos/dev/loopback.c \
+  ../../../../../src/mos/sys/include/mos.h /usr/include/inttypes.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h /usr/include/stdint.h \
+  /usr/include/bits/wchar.h ../../../config.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdbool.h \
+  ../../../../../src/mos/kernel/linux/include/mutex.h \
+  /usr/include/pthread.h /usr/include/endian.h /usr/include/bits/endian.h \
+  /usr/include/sched.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h /usr/include/time.h \
+  /usr/include/bits/sched.h /usr/include/bits/time.h \
+  /usr/include/signal.h /usr/include/bits/sigset.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/bits/setjmp.h \
+  ../../../../../src/mos/dev/include/dev.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  ../../../../../src/mos/kernel/linux/include/mutex.h
+
+../../../../../src/mos/sys/include/mos.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+../../../config.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdbool.h:
+
+../../../../../src/mos/kernel/linux/include/mutex.h:
+
+/usr/include/pthread.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h:
+
+/usr/include/time.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/setjmp.h:
+
+../../../../../src/mos/dev/include/dev.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h:
+
+../../../../../src/mos/kernel/linux/include/mutex.h:

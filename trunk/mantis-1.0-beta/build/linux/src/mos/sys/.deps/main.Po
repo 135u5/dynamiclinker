@@ -1,0 +1,176 @@
+main.o main.o: ../../../../../src/mos/sys/main.c \
+  ../../../../../src/mos/sys/include/mos.h /usr/include/inttypes.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h /usr/include/stdint.h \
+  /usr/include/bits/wchar.h ../../../config.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdbool.h \
+  /usr/include/stdlib.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
+  /usr/include/sys/types.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  ../../../../../src/mos/kernel/linux/include/arg.h \
+  ../../../../../src/lib/include/gevent.h \
+  ../../../../../src/mos/sys/include/mos.h /usr/include/stdio.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h ../../../../../src/mos/com/include/serial.h \
+  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h /usr/include/termios.h \
+  /usr/include/bits/termios.h /usr/include/sys/ttydefaults.h \
+  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+  /usr/include/bits/confname.h /usr/include/getopt.h \
+  ../../../../../src/mos/com/include/com.h \
+  ../../../../../src/mos/sys/include/mos.h \
+  ../../../../../src/mos/kernel/linux/include/mutex.h \
+  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+  /usr/include/signal.h /usr/include/bits/setjmp.h \
+  ../../../../../src/mos/com/include/terminal.h \
+  ../../../../../src/mos/com/include/xmos_radio.h \
+  ../../../../../src/mos/dev/include/xmos-flash.h \
+  ../../../../../src/mos/sys/include/led.h \
+  ../../../../../src/lib/include/gevent.h \
+  ../../../../../src/mos/kernel/linux/include/node_id.h \
+  ../../../../../src/mos/kernel/linux/include/msched.h \
+  ../../../../../src/mos/com/include/com.h \
+  ../../../../../src/mos/kernel/include/clock.h \
+  ../../../../../src/mos/sys/include/mos.h
+
+../../../../../src/mos/sys/include/mos.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+../../../config.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdbool.h:
+
+/usr/include/stdlib.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+../../../../../src/mos/kernel/linux/include/arg.h:
+
+../../../../../src/lib/include/gevent.h:
+
+../../../../../src/mos/sys/include/mos.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+../../../../../src/mos/com/include/serial.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/bits/stat.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/bits/fcntl.h:
+
+/usr/include/termios.h:
+
+/usr/include/bits/termios.h:
+
+/usr/include/sys/ttydefaults.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+../../../../../src/mos/com/include/com.h:
+
+../../../../../src/mos/sys/include/mos.h:
+
+../../../../../src/mos/kernel/linux/include/mutex.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/setjmp.h:
+
+../../../../../src/mos/com/include/terminal.h:
+
+../../../../../src/mos/com/include/xmos_radio.h:
+
+../../../../../src/mos/dev/include/xmos-flash.h:
+
+../../../../../src/mos/sys/include/led.h:
+
+../../../../../src/lib/include/gevent.h:
+
+../../../../../src/mos/kernel/linux/include/node_id.h:
+
+../../../../../src/mos/kernel/linux/include/msched.h:
+
+../../../../../src/mos/com/include/com.h:
+
+../../../../../src/mos/kernel/include/clock.h:
+
+../../../../../src/mos/sys/include/mos.h:

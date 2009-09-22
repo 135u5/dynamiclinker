@@ -1,0 +1,1 @@
+prog2load_buf.o prog2load_buf.o: prog2load_buf.c

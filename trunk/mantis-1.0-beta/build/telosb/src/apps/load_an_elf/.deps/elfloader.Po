@@ -1,0 +1,29 @@
+elfloader.o elfloader.o:  \
+ ../../../../../src/apps/load_an_elf/loader/elfloader.c \
+  ../../../../../src/apps/load_an_elf/loader/elfloader.h \
+  ../../../../../src/apps/load_an_elf/loader/elfloader-arch.h \
+  ../../../../../src/apps/load_an_elf/elfstore/elfstore.h \
+  ../../../../../src/apps/load_an_elf/loader/symtab.h \
+  /home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stddef.h \
+  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/string.h \
+  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/types.h \
+  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/cdefs.h \
+  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/inttypes.h
+
+../../../../../src/apps/load_an_elf/loader/elfloader.h:
+
+../../../../../src/apps/load_an_elf/loader/elfloader-arch.h:
+
+../../../../../src/apps/load_an_elf/elfstore/elfstore.h:
+
+../../../../../src/apps/load_an_elf/loader/symtab.h:
+
+/home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stddef.h:
+
+/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/string.h:
+
+/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/types.h:
+
+/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/cdefs.h:
+
+/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/inttypes.h:

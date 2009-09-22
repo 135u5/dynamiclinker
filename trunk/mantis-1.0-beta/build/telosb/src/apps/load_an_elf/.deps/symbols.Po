@@ -1,0 +1,6 @@
+symbols.o symbols.o: symbols.c symbols.h \
+  ../../../../../src/apps/load_an_elf/loader/symbols-def.h
+
+symbols.h:
+
+../../../../../src/apps/load_an_elf/loader/symbols-def.h:

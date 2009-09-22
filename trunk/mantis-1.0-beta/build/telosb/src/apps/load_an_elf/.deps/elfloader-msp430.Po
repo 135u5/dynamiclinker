@@ -1,0 +1,14 @@
+elfloader-msp430.o elfloader-msp430.o:  \
+ ../../../../../src/apps/load_an_elf/loader/elfloader-msp430.c \
+  ../../../../../src/apps/load_an_elf/loader/elfloader-arch.h \
+  ../../../../../src/apps/load_an_elf/loader/elfloader.h \
+  ../../../../../src/apps/load_an_elf/elfstore/elfstore.h \
+  ../../../../../src/apps/load_an_elf/dev/flash.h
+
+../../../../../src/apps/load_an_elf/loader/elfloader-arch.h:
+
+../../../../../src/apps/load_an_elf/loader/elfloader.h:
+
+../../../../../src/apps/load_an_elf/elfstore/elfstore.h:
+
+../../../../../src/apps/load_an_elf/dev/flash.h:
