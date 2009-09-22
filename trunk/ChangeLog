@@ -1,5 +1,6 @@
 2009/09/22 Simone Corbetta <simone.corbetta@gmail.com>
 	* Project has been moved under SVN
 	* First import; still several bugs and hierarchy to be fixed
+	* Some additional text (README file)
 
 12-07-03: Moving to automake system so we need this file. 

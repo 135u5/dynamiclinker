@@ -1,0 +1,7 @@
+This is the root directory of the dynamic linker project. The 'gui' directory contains the Qt
+source code for the WLF loader functionality; 'mantis-1.0-beta' contains the entire source tree
+of the MANTIS operating system, with applications and tests. The set of tools (known as
+'mos-0.9.5') is not included for now in the SVN support for this project. 
+
+Any question should be sent to one of the authors, as found in the 'ATUHORS' file.
+
