@@ -1,0 +1,100 @@
+make  all-recursive
+make[1]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux'
+Making all in src
+make[2]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src'
+Making all in lib
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/lib'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/lib'
+Making all in mos
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos'
+Making all in kernel
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel'
+Making all in linux
+make[5]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel/linux'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel/linux'
+make[5]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel'
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/kernel'
+Making all in share
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/share'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/share'
+Making all in sys
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/sys'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/sys'
+Making all in com
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/com'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/com'
+Making all in dev
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/dev'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos/dev'
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos'
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/mos'
+Making all in tools
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools'
+Making all in shell
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools/shell'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools/shell'
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools'
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/tools'
+Making all in apps
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps'
+Making all in blink_led
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps/blink_led'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps/blink_led'
+Making all in commander
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps/commander'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps/commander'
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps'
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/apps'
+Making all in test
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test'
+Making all in semaphore_test
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/semaphore_test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/semaphore_test'
+Making all in crc_test
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/crc_test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/crc_test'
+Making all in fec_test
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/fec_test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/fec_test'
+Making all in arith_test
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/arith_test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/arith_test'
+Making all in comselect_test
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/comselect_test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test/comselect_test'
+make[4]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test'
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src/test'
+make[3]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src'
+make[2]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux/src'
+make[2]: Entering directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux'
+
+MOS Build complete
+
+make[2]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux'
+make[1]: Leaving directory `/home/iceman/cefriel/telosb/mantis-1.0-beta/build/linux'
