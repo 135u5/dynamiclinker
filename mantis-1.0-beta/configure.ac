@@ -238,19 +238,10 @@ AC_CONFIG_FILES([
 	  src/mos/com/Makefile
 	  src/mos/dev/Makefile
 	  src/apps/Makefile	
-	  src/apps/alarm_example/Makefile
-	  src/apps/big_example/Makefile
 	  src/apps/load_an_elf/Makefile
 	  src/apps/blink_led/Makefile
-	  src/apps/commander/Makefile
 	  src/apps/led_example/Makefile
-	  src/apps/mst_proto_example/Makefile
 	  src/apps/printf_example/Makefile
-	  src/apps/sense_and_forward/Makefile
-	  src/apps/sleep_example/Makefile
-	  src/apps/testbed_demo/Makefile
-	  src/apps/flash_receiver/Makefile
-	  src/apps/gps_example/Makefile
 	  src/test/Makefile
 	  src/test/adc_test/Makefile
 	  src/test/arith_test/Makefile
