@@ -1,6 +1,0 @@
-crc.o crc.o: ../../../../src/lib/crc.c ../../../../src/lib/include/crc.h \
-  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/inttypes.h
-
-../../../../src/lib/include/crc.h:
-
-/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/inttypes.h:

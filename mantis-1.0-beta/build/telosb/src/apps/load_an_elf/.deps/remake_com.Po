@@ -1,1 +1,0 @@
-remake_com.o remake_com.o: remake_com.c
