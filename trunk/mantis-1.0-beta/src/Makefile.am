@@ -1,9 +1,9 @@
 if ARCH_LINUX
-SUBDIRS = lib mos tools apps test
+SUBDIRS = lib mos tools apps
 endif
 
 if ARCH_MICRO
-SUBDIRS = lib mos apps test
+SUBDIRS = lib mos apps
 endif
 
 .PHONY: $(APPS) mos

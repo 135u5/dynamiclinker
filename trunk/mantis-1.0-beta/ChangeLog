@@ -1,6 +1,7 @@
 2009/09/24 Simone Corbetta <simone.corbetta@gmail.com>
 	* Some bug fixes today (different commits allow for specific revision
 	  checkout, for flexibility)
+	* Test applications under 'test' directory have been removed
 
 2009/09/24 Simone Corbetta <simone.corbetta@gmail.com>
 	* Deleted some unnecessary files 
