@@ -1,1 +1,0 @@
-msp430-i2c.o msp430-i2c.o: ../../../../../src/mos/dev/msp430-i2c.c
