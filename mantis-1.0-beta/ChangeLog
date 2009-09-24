@@ -1,1 +1,5 @@
+2009/09/24 Simone Corbetta <simone.corbetta@gmail.com>
+	* Deleted some unnecessary files 
+	* Updated <root>/configure.ac file
+
 12-07-03: Moving to automake system so we need this file. 
