@@ -1,15 +1,12 @@
-This is MOS, the MANTIS Operating System.
+The DynamicLinker project (dynamiclinker) defines a suitable mechanism to 
+dynamically add new functionalities to the sensore node. The project is based
+on the MANTIS Operating System from the Computer Science research group at the
+University of Colorado at Boulder (http://mantis.cs.colorado.edu).
 
-To get started, check out the pre-built images for telosb, micaz, and
-mica2 in the hello_world directory, as well as the instructions on how
-to load them onto motes.  More in-depth documentation and tutorials
-can be found on the MANTIS website, at http://mantis.cs.colorado.edu.
+Any question for the MANITS OS should be sent to the original developers at
 
-Check out the setup tutorials on the webpage for an introduction to
-MANTIS:
-http://mantis.cs.colorado.edu/index.php/tiki-index.php?page=Tutorials
+	http://mantis.cs.colorado.edu/mailman/listinfo/mantis-users
 
-If you have any questions or comments, you can direct them to the
-mantis users mailing list, found at:
-http://mantis.cs.colorado.edu/mailman/listinfo/mantis-users
+while any question about the DynamicLinker extension should be sent to any of the
+authors found in the <root>/AUTHORS file.
 

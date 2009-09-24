@@ -13,15 +13,6 @@
 /* Defined if the clock is 4.0 MHz */
 #define CLOCK_SPEED_3_68 1
 
-/* Defined if the clock is 4.0 MHz */
-/* #undef CLOCK_SPEED_4_0 */
-
-/* Defined if the clock is 7.37 MHz */
-/* #undef CLOCK_SPEED_7_37 */
-
-/* Defined if the clock is 4.0 MHz */
-/* #undef CLOCK_SPEED_8_0 */
-
 /* Defined if we are using flooding routing */
 #define FLOODING_ROUTING 1
 
@@ -99,21 +90,6 @@
 
 /* Defined if the platform is Linux */
 /* #undef PLATFORM_LINUX */
-
-/* Defined if the platform is mica2 */
-/* #undef PLATFORM_MICA2 */
-
-/* Defined if the platform is micaz */
-/* #undef PLATFORM_MICA2DOT */
-
-/* Defined if the platform is micaz */
-/* #undef PLATFORM_MICAZ */
-
-/* Defined if the platform is any mica */
-/* #undef PLATFORM_MICA_ANY */
-
-/* Defined if the platform is microblaze */
-/* #undef PLATFORM_MICROBLAZE */
 
 /* Defined if the platform supports the CC2420 Radio */
 #define PLATFORM_SUPPORTS_CC2420 1
