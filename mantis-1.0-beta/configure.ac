@@ -192,20 +192,21 @@ fi
 AM_CONDITIONAL(PLATFORM_MICROBLAZE, test "$enable_microblaze" = yes)
 if test "$enable_microblaze" = "yes"
 then
-  AC_DEFINE(PLATFORM_MICROBLAZE, 1, [Defined if the platform is microblaze])
-  AC_DEFINE(FLOODING_ROUTING, 1, [Defined if we are using flooding routing])
-  AC_DEFINE(CLOCK_SPEED_8_0, 1, [Defined if the clock is 4.0 MHz])
-  AC_DEFINE(PLATFORM_SUPPORTS_CC2420, 1, [Defined if the platform supports the CC2420 Radio])
-  AM_CONDITIONAL(ARCH_MICRO, true)
-  AM_CONDITIONAL(FLOODING_ROUTING, true)
-  AM_CONDITIONAL(PLATFORM_NYMPH, false)
-  AM_CONDITIONAL(PLATFORM_MICA2, false)
-  AM_CONDITIONAL(PLATFORM_MICA_ANY, false)
-  AM_CONDITIONAL(PLATFORM_MICAZ, false)
-  AM_CONDITIONAL(PLATFORM_TELOSB, false)
-  AM_CONDITIONAL(PLATFORM_AVRDEV, false)
-  AM_CONDITIONAL(PLATFORM_MICA2DOT, false)
-  AM_CONDITIONAL(PLATFORM_MICROBLAZE, true)
+	AC_ERROR(MICROBLAZE platform not supported)
+#  AC_DEFINE(PLATFORM_MICROBLAZE, 1, [Defined if the platform is microblaze])
+#  AC_DEFINE(FLOODING_ROUTING, 1, [Defined if we are using flooding routing])
+#  AC_DEFINE(CLOCK_SPEED_8_0, 1, [Defined if the clock is 4.0 MHz])
+#  AC_DEFINE(PLATFORM_SUPPORTS_CC2420, 1, [Defined if the platform supports the CC2420 Radio])
+#  AM_CONDITIONAL(ARCH_MICRO, true)
+#  AM_CONDITIONAL(FLOODING_ROUTING, true)
+#  AM_CONDITIONAL(PLATFORM_NYMPH, false)
+#  AM_CONDITIONAL(PLATFORM_MICA2, false)
+#  AM_CONDITIONAL(PLATFORM_MICA_ANY, false)
+#  AM_CONDITIONAL(PLATFORM_MICAZ, false)
+#  AM_CONDITIONAL(PLATFORM_TELOSB, false)
+#  AM_CONDITIONAL(PLATFORM_AVRDEV, false)
+#  AM_CONDITIONAL(PLATFORM_MICA2DOT, false)
+#  AM_CONDITIONAL(PLATFORM_MICROBLAZE, true)
 fi
 
 AC_MSG_CHECKING([if we should default to USB-serial])
@@ -229,8 +230,7 @@ AC_CONFIG_FILES([
 	  src/mos/kernel/avr/Makefile
 	  src/mos/kernel/avr/boot/Makefile
 	  src/mos/kernel/msp430/Makefile
-	  src/mos/kernel/micro/Makefile
-      	  src/mos/kernel/microblaze/Makefile
+	  src/mos/kernel/micro/Makefile     
 	  src/mos/kernel/linux/Makefile
 	  src/mos/sys/Makefile
 	  src/mos/share/Makefile

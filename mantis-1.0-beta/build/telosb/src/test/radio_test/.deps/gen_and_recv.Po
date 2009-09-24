@@ -1,38 +1,38 @@
 gen_and_recv.o gen_and_recv.o:  \
  ../../../../../src/test/radio_test/gen_and_recv.c \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/inttypes.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/inttypes.h \
   ../../../../../src/mos/kernel/micro/include/msched.h \
   ../../../../../src/mos/sys/include/mos.h ../../../config.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/io.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430x16x.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/iomacros.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/inttypes.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/mpy.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/gpio.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/iostructures.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/usart.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/svs.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/flash.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/compa.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/timera.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/timerb.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/basic_clock.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/adc12.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/dac12.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/dma.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/common.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/io.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430x16x.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/iomacros.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/inttypes.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/mpy.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/gpio.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/iostructures.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/usart.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/svs.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/flash.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/compa.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/timera.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/timerb.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/basic_clock.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/adc12.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/dac12.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/dma.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/common.h \
   ../../../../../src/mos/kernel/msp430/include/plat_dep.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/types.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/cdefs.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/signal.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/types.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/cdefs.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/signal.h \
   ../../../../../src/mos/share/include/command_daemon.h \
   ../../../../../src/mos/com/include/com.h \
   ../../../../../src/mos/kernel/micro/include/mutex.h \
   ../../../../../src/mos/kernel/micro/include/tlist.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdarg.h \
-  /home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdbool.h
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdarg.h \
+  /home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdbool.h
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/inttypes.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/inttypes.h:
 
 ../../../../../src/mos/kernel/micro/include/msched.h:
 
@@ -40,49 +40,49 @@ gen_and_recv.o gen_and_recv.o:  \
 
 ../../../config.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/io.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/io.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430x16x.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430x16x.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/iomacros.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/iomacros.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/inttypes.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/inttypes.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/mpy.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/mpy.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/gpio.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/gpio.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/iostructures.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/iostructures.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/usart.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/usart.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/svs.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/svs.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/flash.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/flash.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/compa.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/compa.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/timera.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/timera.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/timerb.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/timerb.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/basic_clock.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/basic_clock.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/adc12.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/adc12.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/dac12.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/dac12.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/dma.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/dma.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/msp430/common.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/msp430/common.h:
 
 ../../../../../src/mos/kernel/msp430/include/plat_dep.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/types.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/types.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/sys/cdefs.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/sys/cdefs.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/msp430/include/signal.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/msp430/include/signal.h:
 
 ../../../../../src/mos/share/include/command_daemon.h:
 
@@ -92,6 +92,6 @@ gen_and_recv.o gen_and_recv.o:  \
 
 ../../../../../src/mos/kernel/micro/include/tlist.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdarg.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdarg.h:
 
-/home/iceman/cefriel/telosb/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdbool.h:
+/home/iceman/cefriel/dynamiclinker/mos-0.9.5/tools/lib/gcc-lib/msp430/3.2.3/include/stdbool.h:

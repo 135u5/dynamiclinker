@@ -31,10 +31,12 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 #am__append_1 = avr
 am__append_2 = msp430
-#am__append_3 = microblaze
-am__append_4 = micro
-#am__append_5 = microblaze
-#am__append_6 = linux
+
+#if PLATFORM_MICROBLAZE
+#SUBDIRS += microblaze
+#endif
+am__append_3 = micro
+#am__append_4 = linux
 subdir = src/mos/kernel
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -57,7 +59,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = avr msp430 microblaze micro linux
+DIST_SUBDIRS = avr msp430 micro linux
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /home/iceman/cefriel/dynamiclinker/mantis-1.0-beta/missing --run aclocal-1.10
 AMTAR = ${SHELL} /home/iceman/cefriel/dynamiclinker/mantis-1.0-beta/missing --run tar
@@ -152,7 +154,7 @@ target_alias =
 top_builddir = ../../..
 top_srcdir = ../../../../..
 SUBDIRS = $(am__append_1) $(am__append_2) $(am__append_3) \
-	$(am__append_4) $(am__append_5) $(am__append_6)
+	$(am__append_4)
 all: all-recursive
 
 .SUFFIXES:
