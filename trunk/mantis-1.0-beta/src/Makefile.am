@@ -1,4 +1,3 @@
-
 if ARCH_LINUX
 SUBDIRS = lib mos tools apps test
 endif

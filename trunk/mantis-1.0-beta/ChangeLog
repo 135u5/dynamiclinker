@@ -1,4 +1,8 @@
 2009/09/24 Simone Corbetta <simone.corbetta@gmail.com>
+	* Some bug fixes today (different commits allow for specific revision
+	  checkout, for flexibility)
+
+2009/09/24 Simone Corbetta <simone.corbetta@gmail.com>
 	* Deleted some unnecessary files 
 	* Updated some configure and makefiles
 
