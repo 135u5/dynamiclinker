@@ -51,7 +51,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = lib mos tools apps test
+DIST_SUBDIRS = lib mos tools apps
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
@@ -145,8 +145,8 @@ sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-@ARCH_LINUX_TRUE@SUBDIRS = lib mos tools apps test
-@ARCH_MICRO_TRUE@SUBDIRS = lib mos apps test
+@ARCH_LINUX_TRUE@SUBDIRS = lib mos tools apps
+@ARCH_MICRO_TRUE@SUBDIRS = lib mos apps
 all: all-recursive
 
 .SUFFIXES:

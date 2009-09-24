@@ -6304,7 +6304,7 @@ fi
 ac_config_headers="$ac_config_headers config.h"
 
 
-ac_config_files="$ac_config_files Makefile src/Makefile src/lib/Makefile src/mos/Makefile src/mos/kernel/Makefile src/mos/kernel/avr/Makefile src/mos/kernel/avr/boot/Makefile src/mos/kernel/msp430/Makefile src/mos/kernel/micro/Makefile src/mos/kernel/linux/Makefile src/mos/sys/Makefile src/mos/share/Makefile src/mos/net/Makefile src/mos/com/Makefile src/mos/dev/Makefile src/apps/Makefile src/apps/alarm_example/Makefile src/apps/big_example/Makefile src/apps/load_an_elf/Makefile src/apps/blink_led/Makefile src/apps/commander/Makefile src/apps/led_example/Makefile src/apps/mst_proto_example/Makefile src/apps/printf_example/Makefile src/apps/sense_and_forward/Makefile src/apps/sleep_example/Makefile src/apps/testbed_demo/Makefile src/apps/flash_receiver/Makefile src/apps/gps_example/Makefile src/test/Makefile src/test/adc_test/Makefile src/test/arith_test/Makefile src/test/fec_test/Makefile src/test/cca_test/Makefile src/test/cc2420_test/Makefile src/test/com_test/Makefile src/test/comselect_test/Makefile src/test/microblaze_test/Makefile src/test/crc_test/Makefile src/test/eeprom_test/Makefile src/test/ext_flash_test/Makefile src/test/flooding_test/Makefile src/test/fft_test/Makefile src/test/gps_test/Makefile src/test/id_test/Makefile src/test/mosix_test/Makefile src/test/radio_test/Makefile src/test/realtime_test/Makefile src/test/rssi_test/Makefile src/test/sensor_test/Makefile src/test/semaphore_test/Makefile src/test/sleep_test/Makefile src/test/tdma_test/Makefile src/test/throttle_test/Makefile src/test/clock_test/Makefile src/test/dvdrp_test/Makefile src/test/cts_test/Makefile src/test/weatherboard_test/Makefile src/test/performance/Makefile src/test/accel_test/Makefile src/test/uart_test/Makefile src/test/uart_test_raw/Makefile src/test/telos_hum/Makefile src/test/telos_flash/Makefile src/test/asymmetry/Makefile src/tools/Makefile src/tools/shell/Makefile src/tools/gtkMosShell/Makefile src/tools/gateway/Makefile src/tools/cortex/libbionet/Makefile src/tools/cortex/Makefile src/tools/logview/Makefile src/apps/flash_test/Makefile src/apps/msgs_test/Makefile"
+ac_config_files="$ac_config_files Makefile src/Makefile src/lib/Makefile src/mos/Makefile src/mos/kernel/Makefile src/mos/kernel/avr/Makefile src/mos/kernel/avr/boot/Makefile src/mos/kernel/msp430/Makefile src/mos/kernel/micro/Makefile src/mos/kernel/linux/Makefile src/mos/sys/Makefile src/mos/share/Makefile src/mos/net/Makefile src/mos/com/Makefile src/mos/dev/Makefile src/apps/Makefile src/apps/load_an_elf/Makefile src/apps/blink_led/Makefile src/apps/led_example/Makefile src/apps/printf_example/Makefile src/apps/flash_test/Makefile src/apps/msgs_test/Makefile src/tools/Makefile src/tools/shell/Makefile src/tools/gtkMosShell/Makefile src/tools/gateway/Makefile src/tools/cortex/libbionet/Makefile src/tools/cortex/Makefile src/tools/logview/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -7224,55 +7224,12 @@ do
     "src/mos/com/Makefile") CONFIG_FILES="$CONFIG_FILES src/mos/com/Makefile" ;;
     "src/mos/dev/Makefile") CONFIG_FILES="$CONFIG_FILES src/mos/dev/Makefile" ;;
     "src/apps/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/Makefile" ;;
-    "src/apps/alarm_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/alarm_example/Makefile" ;;
-    "src/apps/big_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/big_example/Makefile" ;;
     "src/apps/load_an_elf/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/load_an_elf/Makefile" ;;
     "src/apps/blink_led/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/blink_led/Makefile" ;;
-    "src/apps/commander/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/commander/Makefile" ;;
     "src/apps/led_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/led_example/Makefile" ;;
-    "src/apps/mst_proto_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/mst_proto_example/Makefile" ;;
     "src/apps/printf_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/printf_example/Makefile" ;;
-    "src/apps/sense_and_forward/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/sense_and_forward/Makefile" ;;
-    "src/apps/sleep_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/sleep_example/Makefile" ;;
-    "src/apps/testbed_demo/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/testbed_demo/Makefile" ;;
-    "src/apps/flash_receiver/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/flash_receiver/Makefile" ;;
-    "src/apps/gps_example/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/gps_example/Makefile" ;;
-    "src/test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/Makefile" ;;
-    "src/test/adc_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/adc_test/Makefile" ;;
-    "src/test/arith_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/arith_test/Makefile" ;;
-    "src/test/fec_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/fec_test/Makefile" ;;
-    "src/test/cca_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/cca_test/Makefile" ;;
-    "src/test/cc2420_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/cc2420_test/Makefile" ;;
-    "src/test/com_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/com_test/Makefile" ;;
-    "src/test/comselect_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/comselect_test/Makefile" ;;
-    "src/test/microblaze_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/microblaze_test/Makefile" ;;
-    "src/test/crc_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/crc_test/Makefile" ;;
-    "src/test/eeprom_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/eeprom_test/Makefile" ;;
-    "src/test/ext_flash_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/ext_flash_test/Makefile" ;;
-    "src/test/flooding_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/flooding_test/Makefile" ;;
-    "src/test/fft_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/fft_test/Makefile" ;;
-    "src/test/gps_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/gps_test/Makefile" ;;
-    "src/test/id_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/id_test/Makefile" ;;
-    "src/test/mosix_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/mosix_test/Makefile" ;;
-    "src/test/radio_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/radio_test/Makefile" ;;
-    "src/test/realtime_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/realtime_test/Makefile" ;;
-    "src/test/rssi_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/rssi_test/Makefile" ;;
-    "src/test/sensor_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/sensor_test/Makefile" ;;
-    "src/test/semaphore_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/semaphore_test/Makefile" ;;
-    "src/test/sleep_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/sleep_test/Makefile" ;;
-    "src/test/tdma_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/tdma_test/Makefile" ;;
-    "src/test/throttle_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/throttle_test/Makefile" ;;
-    "src/test/clock_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/clock_test/Makefile" ;;
-    "src/test/dvdrp_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/dvdrp_test/Makefile" ;;
-    "src/test/cts_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/cts_test/Makefile" ;;
-    "src/test/weatherboard_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/weatherboard_test/Makefile" ;;
-    "src/test/performance/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/performance/Makefile" ;;
-    "src/test/accel_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/accel_test/Makefile" ;;
-    "src/test/uart_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/uart_test/Makefile" ;;
-    "src/test/uart_test_raw/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/uart_test_raw/Makefile" ;;
-    "src/test/telos_hum/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/telos_hum/Makefile" ;;
-    "src/test/telos_flash/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/telos_flash/Makefile" ;;
-    "src/test/asymmetry/Makefile") CONFIG_FILES="$CONFIG_FILES src/test/asymmetry/Makefile" ;;
+    "src/apps/flash_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/flash_test/Makefile" ;;
+    "src/apps/msgs_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/msgs_test/Makefile" ;;
     "src/tools/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/Makefile" ;;
     "src/tools/shell/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/shell/Makefile" ;;
     "src/tools/gtkMosShell/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/gtkMosShell/Makefile" ;;
@@ -7280,8 +7237,6 @@ do
     "src/tools/cortex/libbionet/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/cortex/libbionet/Makefile" ;;
     "src/tools/cortex/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/cortex/Makefile" ;;
     "src/tools/logview/Makefile") CONFIG_FILES="$CONFIG_FILES src/tools/logview/Makefile" ;;
-    "src/apps/flash_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/flash_test/Makefile" ;;
-    "src/apps/msgs_test/Makefile") CONFIG_FILES="$CONFIG_FILES src/apps/msgs_test/Makefile" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

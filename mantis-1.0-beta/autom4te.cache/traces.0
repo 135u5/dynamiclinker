@@ -1018,7 +1018,7 @@ m4trace:configure.ac:222: -1- AM_CONFIG_HEADER([config.h])
 m4trace:configure.ac:222: -1- _m4_warn([obsolete], [The macro `AM_CONFIG_HEADER' is obsolete.
 You should run autoupdate.], [/usr/share/aclocal-1.10/header.m4:12: AM_CONFIG_HEADER is expanded from...
 configure.ac:222: the top level])
-m4trace:configure.ac:301: -1- m4_pattern_allow([^LIB@&t@OBJS$])
-m4trace:configure.ac:301: -1- m4_pattern_allow([^LTLIBOBJS$])
-m4trace:configure.ac:301: -1- _AC_AM_CONFIG_HEADER_HOOK([$ac_file])
-m4trace:configure.ac:301: -1- _AM_OUTPUT_DEPENDENCY_COMMANDS
+m4trace:configure.ac:256: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:256: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.ac:256: -1- _AC_AM_CONFIG_HEADER_HOOK([$ac_file])
+m4trace:configure.ac:256: -1- _AM_OUTPUT_DEPENDENCY_COMMANDS
