@@ -25,3 +25,18 @@ directory.
 	For any kind of information or requests, please contact the authors/maintainers
 of the project, as found in the '<root>/AUTHORS' file.
 
+
+Documentation
+=============
+Doxygen is required for this step. This procedure will output an HTML and a LaTeX 
+version of the source-code documentation (typically, APIs). To compile and install 
+the documentation, go to the <root> direcotry and type 'doxygen'. The output will 
+be store in the <root>/doc directory. This directory will contain three subdirectories:
+
+	html    contains the HTML documentation, starting from index.html file
+	latex	contains a LaTeX documentation, with .pdf output
+	man		contains the man pages (*.3)
+
+
+
+
