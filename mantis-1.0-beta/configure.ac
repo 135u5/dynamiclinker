@@ -242,42 +242,8 @@ AC_CONFIG_FILES([
 	  src/apps/blink_led/Makefile
 	  src/apps/led_example/Makefile
 	  src/apps/printf_example/Makefile
-	  src/test/Makefile
-	  src/test/adc_test/Makefile
-	  src/test/arith_test/Makefile
-	  src/test/fec_test/Makefile
-	  src/test/cca_test/Makefile
-	  src/test/cc2420_test/Makefile
-	  src/test/com_test/Makefile
-	  src/test/comselect_test/Makefile
-      	  src/test/microblaze_test/Makefile
-	  src/test/crc_test/Makefile
-	  src/test/eeprom_test/Makefile
-	  src/test/ext_flash_test/Makefile
-	  src/test/flooding_test/Makefile
-	  src/test/fft_test/Makefile
-	  src/test/gps_test/Makefile
-	  src/test/id_test/Makefile
-	  src/test/mosix_test/Makefile
-	  src/test/radio_test/Makefile
-	  src/test/realtime_test/Makefile
-	  src/test/rssi_test/Makefile
-	  src/test/sensor_test/Makefile
-	  src/test/semaphore_test/Makefile
-	  src/test/sleep_test/Makefile
-	  src/test/tdma_test/Makefile
-	  src/test/throttle_test/Makefile
-	  src/test/clock_test/Makefile
-	  src/test/dvdrp_test/Makefile
-	  src/test/cts_test/Makefile
-	  src/test/weatherboard_test/Makefile
-	  src/test/performance/Makefile
-	  src/test/accel_test/Makefile
-	  src/test/uart_test/Makefile
-	  src/test/uart_test_raw/Makefile
-	  src/test/telos_hum/Makefile
-	  src/test/telos_flash/Makefile
-      	  src/test/asymmetry/Makefile
+ 	  src/apps/flash_test/Makefile
+	  src/apps/msgs_test/Makefile    
 	  src/tools/Makefile
 	  src/tools/shell/Makefile
 	  src/tools/gtkMosShell/Makefile
@@ -285,8 +251,6 @@ AC_CONFIG_FILES([
 	  src/tools/cortex/libbionet/Makefile
 	  src/tools/cortex/Makefile
 	  src/tools/logview/Makefile
-	  src/apps/flash_test/Makefile
-	  src/apps/msgs_test/Makefile
 	  ])
 
 AC_OUTPUT
