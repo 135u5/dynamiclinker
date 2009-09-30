@@ -5,7 +5,7 @@
 #include "serial.h"
 #include "wlf_loader.h"
 #define BSL_RESET "bsl.py --telosb -c /dev/ttyUSB0 -r"
-#define PROVA "nel mezzo del cammin di nostra vita, mi ritrovai per una selva oscura che la diritta via era smarrita. ahi quanto a dir qual'era e' cosa dura esta selva selvaggia ed aspra e forte che nel pensier rinova la paura"
+#define PROVA "ciao"
 
 uint8_t msg_wlf[4]="wlf";
 uint8_t msg_textsgm[4]="txt";
@@ -93,7 +93,7 @@ void wlfLoader:: load(char*wlf_path){
 			
 		/* Need to copy pointer */
 		sgm=(char*)malloc(sizeof(PROVA));
-		memcpy(sgm,PROVA,sizeof(PROVA));
+		strncpy(sgm,PROVA,sizeof(PROVA));
 		total=sizeof(sgm);
 		temp = sgm;
 		while(total >= 64)
@@ -116,10 +116,9 @@ void wlfLoader:: load(char*wlf_path){
 		memset(end,'Z',COM_DATA_SIZE);
 		com.send_message((unsigned char*)end,COM_DATA_SIZE);
 		
-		fflush(stdout);
 		free(sgm);		
-		
 		printf("\ntext send");
+		fflush(stdout);
 	
 	/*	
 		//send rodata segment

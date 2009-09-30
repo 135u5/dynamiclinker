@@ -53,7 +53,8 @@ void start(void) {
 	const struct symbols *s;	
 	com_mode(IFACE_SERIAL2,IF_LISTEN);
 	unsigned int textsize,rodatasize,datasize,bsssize,j;
-	char* bssAddress, *dataAddress,*textAddress,*rodataAddress,end[COM_DATA_SIZE];
+	char* bssAddress, *dataAddress,*textAddress,*rodataAddress,end[COM_DATA_SIZE],prova[COM_DATA_SIZE];
+	uint32_t temp;
 
 	while(1){
 		//waiting for req
@@ -165,27 +166,32 @@ void start(void) {
        				memcpy(send_pk.data,msg_textsgm,sizeof(msg_textsgm));			
 				com_send(IFACE_SERIAL2,&send_pk);
 				com_free_buf(&send_pk);
+				
 
-				 
+				//flash ops 
   				dev_open(DEV_TELOS_FLASH);
-     				dev_ioctl(DEV_TELOS_FLASH, DEV_SEEK, textAddress);
  
+				//set termination message
 				memset(end,'Z',COM_DATA_SIZE);
+				
+				//recv first message
 				ack=com_recv(IFACE_SERIAL2);
 				com_free_buf(ack);
 
 				while(memcmp(ack->data,end,COM_DATA_SIZE)){
 					
 					dev_write(DEV_TELOS_FLASH,ack->data,COM_DATA_SIZE);
-					textAddress+=COM_DATA_SIZE;
-					dev_ioctl(DEV_TELOS_FLASH, DEV_SEEK, textAddress);
 					ack=com_recv(IFACE_SERIAL2);
 					com_free_buf(ack);							
 									
 				}
 
+			
+				dev_read(DEV_TELOS_FLASH, prova,sizeof(prova));
+				printf("%s",prova);
 				
 				dev_close(DEV_TELOS_FLASH);
+
 
 			}
 
