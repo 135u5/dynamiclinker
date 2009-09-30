@@ -8,12 +8,13 @@
 #include <string>
 #include "symTabGetter.h"
 #include "wlf_loader.h"
+#define SYSTEM_LOG " > system_log 2>&1"
 #define SYSTEM_FILE "system_log"
 #define BSL_RESET "bsl.py --telosb -c /dev/ttyUSB0 -r > system_log 2>&1"
 #define BSL_ERASE "bsl.py --telosb -c /dev/ttyUSB0 -e > system_log 2>&1"
 #define MOS_SHELL "mos_shell --sdev /dev/ttyUSB0 -n > system_log 2>&1"
-#define BOOTSTRAP_NO_ERASE "bsl.py --telosb -r -c /dev/ttyUSB0 -p > system_log 2>&1"
-#define BOOTSTRAP "bsl.py --telosb -e -c /dev/ttyUSB0 -p > system_log 2>&1"
+#define BOOTSTRAP_NO_ERASE "bsl.py --telosb -r -c /dev/ttyUSB0 -p "
+#define BOOTSTRAP "bsl.py --telosb -e -c /dev/ttyUSB0 -p "
 
 
 //MAIN WINDOW
@@ -158,10 +159,18 @@ void MainWindowImpl::browseBootstrap() {
 
 
 void MainWindowImpl::bootstrap(){
+	char*path;
+	
     if(!fileBootstrap->currentText().isEmpty()){	
-    	system(BOOTSTRAP);	
+		path=(char*) malloc(sizeof(BOOTSTRAP)+bootFile.length()+sizeof(SYSTEM_LOG));
+		strncpy(path,BOOTSTRAP,sizeof(BOOTSTRAP));
+		strncat(path,bootFile.toAscii().data(),bootFile.length());
+		strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
+	 	systemOut->clear();
+    	system(path);	
     	systemOut->clear();
 		show_system_output(SYSTEM_FILE);
+		free(path);
  	}else {
  		systemOut->clear();
  		systemOut->append("To launch the Bootstrap loader, you must specify an ELF file.");
@@ -172,11 +181,18 @@ void MainWindowImpl::bootstrap(){
 	}	
 
 void MainWindowImpl::bootstrapNoErase(){
+	char*path;
+	
 	if(!fileBootstrap->currentText().isEmpty()){	
-		system(BOOTSTRAP_NO_ERASE);
+		path=(char*) malloc(sizeof(BOOTSTRAP_NO_ERASE)+bootFile.length()+sizeof(SYSTEM_LOG));
+		strncpy(path,BOOTSTRAP_NO_ERASE,sizeof(BOOTSTRAP_NO_ERASE));
+		strncat(path,bootFile.toAscii().data(),bootFile.length());
+		strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
+	 	systemOut->clear();
+		system(path);
 		systemOut->clear();
 		show_system_output(SYSTEM_FILE);
-		
+		free(path);
 	}else {
  		systemOut->clear();
  		systemOut->append("To launch the non-erasing Bootstrap loader, you must specify an ELF file.");
