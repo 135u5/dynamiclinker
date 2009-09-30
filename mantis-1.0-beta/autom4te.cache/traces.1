@@ -141,7 +141,7 @@ m4trace:configure.ac:1: -1- AC_SUBST_TRACE([target_alias])
 m4trace:configure.ac:1: -1- m4_pattern_allow([^target_alias$])
 m4trace:configure.ac:2: -1- AM_INIT_AUTOMAKE([mos], [0.9])
 m4trace:configure.ac:2: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
-m4trace:configure.ac:2: -1- AM_AUTOMAKE_VERSION([1.10.1])
+m4trace:configure.ac:2: -1- AM_AUTOMAKE_VERSION([1.10.2])
 m4trace:configure.ac:2: -1- AC_REQUIRE_AUX_FILE([install-sh])
 m4trace:configure.ac:2: -1- AC_SUBST([INSTALL_PROGRAM])
 m4trace:configure.ac:2: -1- AC_SUBST_TRACE([INSTALL_PROGRAM])
@@ -199,6 +199,9 @@ m4trace:configure.ac:2: -1- AC_SUBST([INSTALL_STRIP_PROGRAM])
 m4trace:configure.ac:2: -1- AC_SUBST_TRACE([INSTALL_STRIP_PROGRAM])
 m4trace:configure.ac:2: -1- m4_pattern_allow([^INSTALL_STRIP_PROGRAM$])
 m4trace:configure.ac:2: -1- AC_REQUIRE_AUX_FILE([install-sh])
+m4trace:configure.ac:2: -1- AC_SUBST([MKDIR_P])
+m4trace:configure.ac:2: -1- AC_SUBST_TRACE([MKDIR_P])
+m4trace:configure.ac:2: -1- m4_pattern_allow([^MKDIR_P$])
 m4trace:configure.ac:2: -1- AC_SUBST([mkdir_p], ["$MKDIR_P"])
 m4trace:configure.ac:2: -1- AC_SUBST_TRACE([mkdir_p])
 m4trace:configure.ac:2: -1- m4_pattern_allow([^mkdir_p$])
@@ -232,11 +235,6 @@ m4trace:configure.ac:11: -1- _AM_SUBST_NOTMAKE([am__isrc])
 m4trace:configure.ac:11: -1- AC_SUBST([CYGPATH_W])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([CYGPATH_W])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^CYGPATH_W$])
-m4trace:configure.ac:11: -1- _m4_warn([obsolete], [The macro `AC_FOREACH' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/general.m4:196: AC_FOREACH is expanded from...
-aclocal.m4:706: _AM_SET_OPTIONS is expanded from...
-aclocal.m4:432: AM_INIT_AUTOMAKE is expanded from...
-configure.ac:11: the top level])
 m4trace:configure.ac:11: -1- AC_SUBST([PACKAGE], ['AC_PACKAGE_TARNAME'])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([PACKAGE])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^PACKAGE$])
@@ -454,12 +452,6 @@ m4trace:configure.ac:33: -1- m4_pattern_allow([^CPP$])
 m4trace:configure.ac:33: -1- AC_SUBST([GREP])
 m4trace:configure.ac:33: -1- AC_SUBST_TRACE([GREP])
 m4trace:configure.ac:33: -1- m4_pattern_allow([^GREP$])
-m4trace:configure.ac:33: -1- AC_SUBST([GREP])
-m4trace:configure.ac:33: -1- AC_SUBST_TRACE([GREP])
-m4trace:configure.ac:33: -1- m4_pattern_allow([^GREP$])
-m4trace:configure.ac:33: -1- AC_SUBST([EGREP])
-m4trace:configure.ac:33: -1- AC_SUBST_TRACE([EGREP])
-m4trace:configure.ac:33: -1- m4_pattern_allow([^EGREP$])
 m4trace:configure.ac:33: -1- AC_SUBST([EGREP])
 m4trace:configure.ac:33: -1- AC_SUBST_TRACE([EGREP])
 m4trace:configure.ac:33: -1- m4_pattern_allow([^EGREP$])
@@ -525,7 +517,7 @@ m4trace:configure.ac:42: -1- AH_OUTPUT([HAVE_LIBPTHREAD], [/* Define if libpthre
 #undef HAVE_LIBPTHREAD])
 m4trace:configure.ac:42: -1- _m4_warn([obsolete], [The macro `AC_ERROR' is obsolete.
 You should run autoupdate.], [../../lib/autoconf/oldnames.m4:55: AC_ERROR is expanded from...
-../../lib/m4sugar/m4sh.m4:516: AS_IF is expanded from...
+../../lib/m4sugar/m4sh.m4:505: AS_IF is expanded from...
 ../../lib/autoconf/libs.m4:121: AC_CHECK_LIB is expanded from...
 configure.ac:42: the top level])
 m4trace:configure.ac:68: -1- AM_CONDITIONAL([ARCH_LINUX], [true])
@@ -970,7 +962,7 @@ m4trace:configure.ac:219: -1- m4_pattern_allow([^USB_SERIAL$])
 m4trace:configure.ac:219: -1- AH_OUTPUT([USB_SERIAL], [/* default to using the USB-serial converter */
 #undef USB_SERIAL])
 m4trace:configure.ac:222: -1- _m4_warn([obsolete], [The macro `AM_CONFIG_HEADER' is obsolete.
-You should run autoupdate.], [aclocal.m4:405: AM_CONFIG_HEADER is expanded from...
+You should run autoupdate.], [aclocal.m4:416: AM_CONFIG_HEADER is expanded from...
 configure.ac:222: the top level])
 m4trace:configure.ac:222: -1- AC_CONFIG_HEADERS([config.h])
 m4trace:configure.ac:224: -1- AC_CONFIG_FILES([
@@ -1011,6 +1003,7 @@ m4trace:configure.ac:256: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
 m4trace:configure.ac:256: -1- AC_SUBST_TRACE([LTLIBOBJS])
 m4trace:configure.ac:256: -1- m4_pattern_allow([^LTLIBOBJS$])
 m4trace:configure.ac:256: -1- AC_SUBST_TRACE([top_builddir])
+m4trace:configure.ac:256: -1- AC_SUBST_TRACE([top_build_prefix])
 m4trace:configure.ac:256: -1- AC_SUBST_TRACE([srcdir])
 m4trace:configure.ac:256: -1- AC_SUBST_TRACE([abs_srcdir])
 m4trace:configure.ac:256: -1- AC_SUBST_TRACE([top_srcdir])

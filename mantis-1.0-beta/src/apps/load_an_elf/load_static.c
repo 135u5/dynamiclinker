@@ -53,7 +53,7 @@ void start(void) {
 	const struct symbols *s;	
 	com_mode(IFACE_SERIAL2,IF_LISTEN);
 	unsigned int textsize,rodatasize,datasize,bsssize,j;
-	char* bssAddress, *dataAddress,*textAddress,*rodataAddress;
+	char* bssAddress, *dataAddress,*textAddress,*rodataAddress,end[COM_DATA_SIZE];
 
 	while(1){
 		//waiting for req
@@ -166,8 +166,27 @@ void start(void) {
 				com_send(IFACE_SERIAL2,&send_pk);
 				com_free_buf(&send_pk);
 
-				//mos_led_on(2);
-				receive_segm_and_write_rom(textAddress);
+				 
+  				dev_open(DEV_TELOS_FLASH);
+     				dev_ioctl(DEV_TELOS_FLASH, DEV_SEEK, textAddress);
+ 
+				memset(end,'Z',COM_DATA_SIZE);
+				ack=com_recv(IFACE_SERIAL2);
+				com_free_buf(ack);
+
+				while(memcmp(ack->data,end,COM_DATA_SIZE)){
+					
+					dev_write(DEV_TELOS_FLASH,ack->data,COM_DATA_SIZE);
+					textAddress+=COM_DATA_SIZE;
+					dev_ioctl(DEV_TELOS_FLASH, DEV_SEEK, textAddress);
+					ack=com_recv(IFACE_SERIAL2);
+					com_free_buf(ack);							
+									
+				}
+
+				
+				dev_close(DEV_TELOS_FLASH);
+
 			}
 
 		
@@ -269,16 +288,13 @@ static void convert_and_send (uint16_t value, uint8_t radix, comBuf *send){
 /*----------------------function to allocate ROM to readonly segments---------------------------*/
 
 inline void
-receive_segm_and_write_rom( char *mem)
+receive_segm_and_write_rom( comBuf *recv_data)
 {
-  int i;
-  unsigned short *flashptr;
-  uint8_t end[COM_DATA_SIZE];
-  flashptr = (unsigned short *)mem;
+ 
   dev_open(DEV_TELOS_FLASH);
      
  //write the first 32Byte-bulk to rom
- dev_write(DEV_TELOS_FLASH,read_pk->data,COM_DATA_SIZE);
+ dev_write(DEV_TELOS_FLASH,recv_data->data,COM_DATA_SIZE);
  dev_close(DEV_TELOS_FLASH);	
 // mos_led_blink(1);
 }
