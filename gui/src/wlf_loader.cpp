@@ -104,12 +104,18 @@ void wlfLoader:: load(char*wlf_path){
 		}
 		if(total < 0)
 		{
-			printf("\nNo bytes left");			
+			printf("\nNo bytes left");
 		}
 		else
 		{
 			/* total should be < 64 */
+<<<<<<< .mine
+			printf("\n%d bytes left... ", total);
+			com.send_message((unsigned char *)temp, total);
+			printf("sent");
+=======
 			com.send_message((unsigned char*)temp,total);
+>>>>>>> .r19
 		}
 		
 		//send the termination message
@@ -120,7 +126,7 @@ void wlfLoader:: load(char*wlf_path){
 		printf("\ntext send");
 		fflush(stdout);
 	
-	/*	
+	/*
 		//send rodata segment
 		if(wlf_hdr.rodata_size){		
 			total=wlf_hdr.rodata_size;
