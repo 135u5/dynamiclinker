@@ -77,13 +77,18 @@ void start(void)
 	dev_close(DEV_TELOS_FLASH);	
 	printf("Exclusive lock has been released; critical section ends\n");
 
+
+//	dev_open(DEV_TELOS_FLASH);
+//	dev_write(DEV_TELOS_FLASH, "ghijklm", 6);
+//	dev_close(DEV_TELOS_FLASH);
+
 	/* Read back written data, and output it in 3-digits 
      * decimal representation */	
 	dev_open(DEV_TELOS_FLASH);
-	dev_read(DEV_TELOS_FLASH, temp, 6);
+	dev_read(DEV_TELOS_FLASH, temp, MAX_DATA_BUFFER_SIZE);
 	printf("Entire buffer has been read from FLASH memory\n");
 	dev_close(DEV_TELOS_FLASH);
-	for(index = 0; index < 6; index++)		
+	for(index = 0; index < MAX_DATA_BUFFER_SIZE; index++)		
 	{	
 		/* ---- uncomment the following if you want leds displaying
          * ---- decimal value */		

@@ -31,6 +31,8 @@ uint8_t msg_end[4]="end";
 static unsigned short ie1, ie2;
 comBuf *ack, *read_pk, send_pk;
 
+uint8_t bckp;
+
 void blink_led(void)
 {
 	uint32_t sleep_time;
@@ -110,61 +112,61 @@ void start(void) {
 			//receiving rodata size
 			ack=com_recv(IFACE_SERIAL2);
 			com_free_buf(ack);
-			rodatasize=atoi(ack->data);
-			//mos_led_blink(0);
-				//complete the rodata size handshake		
-				send_pk.size=BUFF_LENGHT;
-       				memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
-       				memcpy(send_pk.data,msg_ack,sizeof(msg_ack));	
-				com_send(IFACE_SERIAL2,&send_pk);
-				com_free_buf(&send_pk);
+			rodatasize=atoi(ack->data);		
+			//complete the rodata size handshake		
+			send_pk.size=BUFF_LENGHT;
+       		memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
+       		memcpy(send_pk.data,msg_ack,sizeof(msg_ack));	
+			com_send(IFACE_SERIAL2,&send_pk);
+			com_free_buf(&send_pk);
 
 			//receiving data size
 			ack=com_recv(IFACE_SERIAL2);
 			com_free_buf(ack);
 			datasize=atoi(ack->data);
-			//mos_led_blink(0);
-				//complete the data size handshake			
-				send_pk.size=BUFF_LENGHT;
-       				memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
-       				memcpy(send_pk.data,msg_ack,sizeof(msg_ack));				
-				com_send(IFACE_SERIAL2,&send_pk);
-				com_free_buf(&send_pk);
+			//complete the data size handshake			
+			send_pk.size=BUFF_LENGHT;
+    		memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
+    		memcpy(send_pk.data,msg_ack,sizeof(msg_ack));				
+			com_send(IFACE_SERIAL2,&send_pk);
+			com_free_buf(&send_pk);
 				
 			//receiving bss size
 			ack=com_recv(IFACE_SERIAL2);
 			com_free_buf(ack);
-			bsssize=atoi(ack->data);
-			//mos_led_blink(0);
-				//complete the bss size handshake
-				send_pk.size=BUFF_LENGHT;
-       				memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
-       				memcpy(send_pk.data,msg_ack,sizeof(msg_ack));				
-				com_send(IFACE_SERIAL2,&send_pk);
-				com_free_buf(&send_pk);
+			bsssize=atoi(ack->data);			
+			//complete the bss size handshake
+			send_pk.size=BUFF_LENGHT;
+       		memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
+       		memcpy(send_pk.data,msg_ack,sizeof(msg_ack));				
+			com_send(IFACE_SERIAL2,&send_pk);
+			com_free_buf(&send_pk);
 				
-
-			mos_thread_new(blink_led, 128, PRIORITY_NORMAL);
+			/* Led should be keeping blinking upon BSS receive */
+//			mos_thread_new(blink_led, 128, PRIORITY_NORMAL);
 
 			//allocate space for segments and get the relative starting points
-			 bssAddress = (char *)elfloader_arch_allocate_ram(bsssize + datasize);
-  			 dataAddress = (char *)bssAddress + bsssize;
-  			 textAddress = (char *)elfloader_arch_allocate_rom(textsize + rodatasize);
-  			 rodataAddress = (char *)textAddress + textsize;
-				
+			bssAddress = (char *)elfloader_arch_allocate_ram(bsssize + datasize);
+  			dataAddress = (char *)bssAddress + bsssize;
+  			textAddress = (char *)elfloader_arch_allocate_rom(textsize + rodatasize);
+  			rodataAddress = (char *)textAddress + textsize;				
 			
 			//recv segments and allocate memory	
 			ack=com_recv(IFACE_SERIAL2);
-			
+		
 			//recv text segment
-			if(ack->data[0]== msg_textsgm[0] && ack->data[1]== msg_textsgm[1] && ack->data[2]== msg_textsgm[2]){
-
-				
+			if(ack->data[0]== msg_textsgm[0] && ack->data[1]== msg_textsgm[1] 
+				&& ack->data[2]== msg_textsgm[2])
+			{
 				//send ack
 				send_pk.size=BUFF_LENGHT;
        				memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
        				memcpy(send_pk.data,msg_textsgm,sizeof(msg_textsgm));			
 				com_send(IFACE_SERIAL2,&send_pk);
+<<<<<<< .mine
+				com_free_buf(&send_pk);											
+				receive_segm_and_write_rom(textAddress);			
+=======
 				com_free_buf(&send_pk);
 				
 
@@ -193,6 +195,7 @@ void start(void) {
 				dev_close(DEV_TELOS_FLASH);
 
 
+>>>>>>> .r19
 			}
 
 		
@@ -231,7 +234,6 @@ void start(void) {
 	//mos_led_on(0);
 	//mos_led_on(2);
 }//end start
-
 
 
 ////////////////////////  CONVERSION UTILITY  //////////////////////////////////////////
@@ -294,8 +296,21 @@ static void convert_and_send (uint16_t value, uint8_t radix, comBuf *send){
 /*----------------------function to allocate ROM to readonly segments---------------------------*/
 
 inline void
+<<<<<<< .mine
+receive_segm_and_write_rom(char *mem)
+=======
 receive_segm_and_write_rom( comBuf *recv_data)
+>>>>>>> .r19
 {
+<<<<<<< .mine
+  int i;
+  uint8_t end[COM_DATA_SIZE]; 
+
+  dev_open(DEV_TELOS_FLASH);     
+  //write the first 32Byte-bulk to rom
+  dev_write(DEV_TELOS_FLASH, read_pk->data, COM_DATA_SIZE);
+  dev_close(DEV_TELOS_FLASH);	
+=======
  
   dev_open(DEV_TELOS_FLASH);
      
@@ -303,6 +318,7 @@ receive_segm_and_write_rom( comBuf *recv_data)
  dev_write(DEV_TELOS_FLASH,recv_data->data,COM_DATA_SIZE);
  dev_close(DEV_TELOS_FLASH);	
 // mos_led_blink(1);
+>>>>>>> .r19
 }
 
 
