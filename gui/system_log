@@ -1,1 +1,1 @@
-python: can't open file '/home/iceman/cefriel/telosb/dynamic_linker/mos/bin/bsl.py': [Errno 2] No such file or directory
+sh: bsl.py: not found
