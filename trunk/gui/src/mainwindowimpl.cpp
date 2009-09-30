@@ -8,14 +8,12 @@
 #include <string>
 #include "symTabGetter.h"
 #include "wlf_loader.h"
-#define PYTHON "python "
-#define SYSTEM_LOG " > system_log 2>&1"
 #define SYSTEM_FILE "system_log"
-#define BSL_RESET "/mos/bin/bsl.py --telosb -c /dev/ttyUSB0 -r"
-#define BSL_ERASE "/mos/bin/bsl.py --telosb -c /dev/ttyUSB0 -e"
-#define MOS_SHELL "/mos/bin/mos_shell --sdev /dev/ttyUSB0 -n"
-#define BOOTSTRAP_NO_ERASE "/mos/bin/bsl.py --telosb -r -c /dev/ttyUSB0 -p "
-#define BOOTSTRAP "/mos/bin/bsl.py --telosb -e -c /dev/ttyUSB0 -p "
+#define BSL_RESET "bsl.py --telosb -c /dev/ttyUSB0 -r > system_log 2>&1"
+#define BSL_ERASE "bsl.py --telosb -c /dev/ttyUSB0 -e > system_log 2>&1"
+#define MOS_SHELL "mos_shell --sdev /dev/ttyUSB0 -n > system_log 2>&1"
+#define BOOTSTRAP_NO_ERASE "bsl.py --telosb -r -c /dev/ttyUSB0 -p > system_log 2>&1"
+#define BOOTSTRAP "bsl.py --telosb -e -c /dev/ttyUSB0 -p > system_log 2>&1"
 
 
 //MAIN WINDOW
@@ -153,30 +151,17 @@ void MainWindowImpl::unload_then_load_wlf(){
 	
 void MainWindowImpl::browseBootstrap() {  
 	   bootFile = QFileDialog::getOpenFileName(this, 
-	   		tr("Open ELF"), 
-	   		"/home/iceman/cefriel/telosb/mantis-1.0-beta/build/telosb/src/apps",//QDir::currentPath(),
-	   		tr("ELF files(*.elf)"));       
+	   		 tr("Open ELF"), QDir::currentPath(),tr("ELF files(*.elf)"));       
        fileBootstrap->addItem(bootFile);
        fileBootstrap->setCurrentIndex(fileBootstrap->currentIndex()+1);   
     }
 
 
 void MainWindowImpl::bootstrap(){
-	char*path;
-	QString dir=QDir::currentPath();
-	
-	 if(!fileBootstrap->currentText().isEmpty()){
-	 	path=(char*) malloc(dir.length()+sizeof(BOOTSTRAP)+bootFile.length()
-							+sizeof(PYTHON)+sizeof(SYSTEM_LOG));
-		strncpy(path,PYTHON,sizeof(PYTHON));
-		strncat(path,dir.toAscii().data(),dir.length());
-		strncat(path,BOOTSTRAP,sizeof(BOOTSTRAP));
-		strncat(path,bootFile.toAscii().data(),bootFile.length());
-		strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
-	 	systemOut->clear();
-    	system(path);	
-    	show_system_output(SYSTEM_FILE);
- 		free(path);
+    if(!fileBootstrap->currentText().isEmpty()){	
+    	system(BOOTSTRAP);	
+    	systemOut->clear();
+		show_system_output(SYSTEM_FILE);
  	}else {
  		systemOut->clear();
  		systemOut->append("To launch the Bootstrap loader, you must specify an ELF file.");
@@ -187,19 +172,8 @@ void MainWindowImpl::bootstrap(){
 	}	
 
 void MainWindowImpl::bootstrapNoErase(){
-	char*path;
-	QString dir=QDir::currentPath();
-	
-	if(!fileBootstrap->currentText().isEmpty()){
-		path=(char*) malloc(dir.length()+sizeof(BOOTSTRAP_NO_ERASE)+bootFile.length()
-							+sizeof(PYTHON)+sizeof(SYSTEM_LOG));
-		strncpy(path,PYTHON,sizeof(PYTHON));
-		strncat(path,dir.toAscii().data(),dir.length());
-		strncat(path,BOOTSTRAP,sizeof(BOOTSTRAP_NO_ERASE));
-		strncat(path,bootFile.toAscii().data(),bootFile.length());
-		strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
-		system(path);
-		free(path);
+	if(!fileBootstrap->currentText().isEmpty()){	
+		system(BOOTSTRAP_NO_ERASE);
 		systemOut->clear();
 		show_system_output(SYSTEM_FILE);
 		
@@ -213,31 +187,14 @@ void MainWindowImpl::bootstrapNoErase(){
 /*---------------------------------DEVICE UTILITIES---------------------------*/
 	
 void  MainWindowImpl::reset(){
-	char*path;
-	QString dir=QDir::currentPath();
-	QString sysout;	
-	path=(char*) malloc(dir.length()+sizeof(BSL_RESET)+sizeof(PYTHON)+sizeof(SYSTEM_LOG));
-	strncpy(path,PYTHON,sizeof(PYTHON));
-	strncat(path,dir.toAscii().data(),dir.length());
-	strncat(path,BSL_RESET,sizeof(BSL_RESET));
-	strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
-	system(path);
-	free(path);
+	system(BSL_RESET);
 	systemOut->clear();
 	show_system_output(SYSTEM_FILE);
 	
 }
 
 void  MainWindowImpl::erase(){
-	char*path;
-	QString dir=QDir::currentPath();
-	path=(char*) malloc(dir.length()+sizeof(BSL_RESET)+sizeof(PYTHON)+sizeof(SYSTEM_LOG));
-	strncpy(path,PYTHON,sizeof(PYTHON));
-	strncat(path,dir.toAscii().data(),dir.length());
-	strncat(path,BSL_ERASE,sizeof(BSL_ERASE));
-	strncat(path,SYSTEM_LOG,sizeof(SYSTEM_LOG));
-	system(path);
-	free(path);
+	system(BSL_ERASE);
 	systemOut->clear();
 	show_system_output(SYSTEM_FILE);
 }
