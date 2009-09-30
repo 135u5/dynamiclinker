@@ -11,7 +11,6 @@
 #include "loader/elfloader.h"
 #include "elfstore/elfstore.h"
 #include "dev/flash.h"
-#include "prog2load_buf.h"
 #include "symbols.h"
 #define NAME_REQ 1
 #define VAL_REQ 2
@@ -30,7 +29,18 @@ uint8_t msg_datasgm[4]="dat";
 uint8_t msg_end[4]="end";
 
 static unsigned short ie1, ie2;
-comBuf *ack,*read_pk, send_pk;
+comBuf *ack, *read_pk, send_pk;
+
+void blink_led(void)
+{
+	uint32_t sleep_time;
+	sleep_time = 250;
+	while(1)
+	{
+		mos_thread_sleep(sleep_time);	
+		mos_led_toggle(1);
+	}
+}
 
 ///////////////  START  ////////////////////////////////////////// 
 
@@ -72,32 +82,29 @@ void start(void) {
 			memset(send_pk.data,'\0',COM_DATA_SIZE);
 			//sending symbol name	
 			com_send(IFACE_SERIAL2,&send_pk);
-			//mos_led_blink(2);
+			//mos_led_blink(2);	
+		}
 
-		//if the command is to receive and load a WLF file
-		}else if(ack->data[0]== msg_wlf[0] && ack->data[1]== msg_wlf[1] && ack->data[2]== msg_wlf[2]){
-			
-			
-			//complete the wlf protocol handshake
+		/* Receive and load a WLF file */
+		else if(ack->data[0] == msg_wlf[0] && ack->data[1] == msg_wlf[1] && 
+			ack->data[2]== msg_wlf[2])
+		{
+			/* Complete the wlf protocol handshake */
 			send_pk.size=BUFF_LENGHT;
-        		memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
-        		memcpy(send_pk.data,msg_wlf,sizeof(msg_wlf));				
-			com_send(IFACE_SERIAL2,&send_pk);
+        	memset((char *)send_pk.data, '\0', COM_DATA_SIZE);
+        	memcpy(send_pk.data, msg_wlf, sizeof(msg_wlf));				
+			com_send(IFACE_SERIAL2, &send_pk);
 			com_free_buf(&send_pk);
-			//mos_led_blink(2);
-			
 
-			//receiving text size
-			ack=com_recv(IFACE_SERIAL2);			
+			/* Receiving text size */
+			ack=com_recv(IFACE_SERIAL2);
 			com_free_buf(ack);
-			textsize=atoi(ack->data);
-			//mos_led_blink(0);
-				//complete the text size handshake	
-				send_pk.size=BUFF_LENGHT;
-	       			memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
-	       			memcpy(send_pk.data,msg_ack,sizeof(msg_ack));			
-				com_send(IFACE_SERIAL2,&send_pk);
-				com_free_buf(&send_pk);
+			textsize = atoi(ack->data);
+			send_pk.size=BUFF_LENGHT;
+    		memset((char*)send_pk.data,'\0',COM_DATA_SIZE);
+    		memcpy(send_pk.data,msg_ack,sizeof(msg_ack));
+			com_send(IFACE_SERIAL2,&send_pk);
+ 			com_free_buf(&send_pk);
 				
 			//receiving rodata size
 			ack=com_recv(IFACE_SERIAL2);
@@ -135,6 +142,8 @@ void start(void) {
 				com_send(IFACE_SERIAL2,&send_pk);
 				com_free_buf(&send_pk);
 				
+
+			mos_thread_new(blink_led, 128, PRIORITY_NORMAL);
 
 			//allocate space for segments and get the relative starting points
 			 bssAddress = (char *)elfloader_arch_allocate_ram(bsssize + datasize);
