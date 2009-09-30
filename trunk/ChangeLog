@@ -1,3 +1,6 @@
+2009/09/39 Simone Corbetta <simone.corbetta@gmail.com>
+	* Fixed bug introduced by last commit on Makefiles
+
 2009/09/30 Luigi Rucco <l.rucco@gmail.com>
 	* Deleted useless files and directories
 	* Souces updates 
