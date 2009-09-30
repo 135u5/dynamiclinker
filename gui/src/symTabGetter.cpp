@@ -5,9 +5,8 @@
 #include "semaphore.h"
 #include "sharedMemory.h"
 #include "mainwindowimpl.h"
-#define PYTHON "python "
-#define BSL_RESET "/mos/bin/bsl.py --telosb -c /dev/ttyUSB0 -r"
-#define BSL_ERASE "/mos/bin/bsl.py --telosb -c /dev/ttyUSB0 -e"
+#define BSL_RESET "bsl.py --telosb -c /dev/ttyUSB0 -r"
+#define BSL_ERASE "bsl.py --telosb -c /dev/ttyUSB0 -e"
 
 
 
@@ -19,13 +18,7 @@ void getSymTab ( QTextEdit *sysout,char*symtab_name,QComboBox*symtabs){
 	FILE *symtab;
 	
 		//reset device	
-		char*path;
-		QString dir=QDir::currentPath();
-		path=(char*) malloc(dir.length()+sizeof(BSL_RESET)+sizeof(PYTHON));
-		strncpy(path,PYTHON,sizeof(PYTHON));
-		strncat(path,dir.toAscii().data(),dir.length());
-		strncat(path,BSL_RESET,sizeof(BSL_RESET));
-		system(path);
+		system(BSL_RESET);
 
 		//initialize the com connection		
 		com.comInit();
@@ -51,8 +44,7 @@ void getSymTab ( QTextEdit *sysout,char*symtab_name,QComboBox*symtabs){
 		com.comClose();	
 	
 		//reset the node
-		system(path);
-		free(path);
+		system(BSL_RESET);
 		
 		//update the GUI
 		sysout->append("\n SYMBOL TABLE DOWNLOADED!\n The relative file has been created with path:");

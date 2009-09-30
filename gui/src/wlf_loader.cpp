@@ -4,8 +4,8 @@
 #include "elf.h"
 #include "serial.h"
 #include "wlf_loader.h"
-#define PYTHON "python "
-#define BSL_RESET "/mos/bin/bsl.py --telosb -c /dev/ttyUSB0 -r"
+#define BSL_RESET "bsl.py --telosb -c /dev/ttyUSB0 -r"
+
 uint8_t msg_wlf[4]="wlf";
 uint8_t msg_textsgm[4]="txt";
 uint8_t msg_rodatasgm[4]="rod";
@@ -21,20 +21,13 @@ void wlfLoader:: load(char*wlf_path){
 	uint8_t *recv;
 	FILE *wlf;
 	wlf_header wlf_hdr;
-
+	unsigned char numbuf[COM_DATA_SIZE];
 	
 		//open wlf file	
 		wlf=fopen(wlf_path,"r");
 	
 		//reset device	
-		char*path;
-		QString dir=QDir::currentPath();
-		path=(char*) malloc(dir.length()+sizeof(BSL_RESET)+sizeof(PYTHON));
-		strncpy(path,PYTHON,sizeof(PYTHON));
-		unsigned char numbuf[COM_DATA_SIZE];
-		strncat(path,dir.toAscii().data(),dir.length());
-		strncat(path,BSL_RESET,sizeof(BSL_RESET));
-		system(path);
+		system(BSL_RESET);
 			
 		
 		//initialize the com connection		
@@ -158,8 +151,7 @@ void wlfLoader:: load(char*wlf_path){
 		com.comClose();
 
 		fclose(wlf);
-		//system(path);
-		free(path);
+		//system(BSL_RESET);
 
 		printf("\nConnection closed");
 		fflush(stdout);		
