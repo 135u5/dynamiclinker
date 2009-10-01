@@ -10,21 +10,6 @@ if ARCH_MICRO
 lib_dev_a_SOURCES += hardware-id.c
 endif
 
-if PLATFORM_MICA_ANY
-lib_dev_a_SOURCES += \
-	            atmel-flash.c \
-	            simple_fs.c \
-		    mica2-light-temp.c \
-	            mica2-mic.c \
-	            mica2-sounder.c \
-	            mica2-accel.c \
-	            mica2-magnet.c \
-	            avr-rssi.c \
-	            mica2-battery.c \
-	            mica2-ultrasound.c \
-		mica2-gps.c
-endif
-
 if PLATFORM_AVRDEV
 lib_dev_a_SOURCES += \
 	simple_fs.c \
@@ -46,13 +31,6 @@ lib_dev_a_SOURCES += msp-adc.c \
 		     msp-flash.c \
 		     msp430-i2c.c \
 		     st_LIS3L.c
-endif
-
-if PLATFORM_MICROBLAZE
-lib_dev_a_SOURCES += mb-adc.c \
-					 mb-spi.c \
-					 mb-adc-parallel.c \
-					 mb-dipsw.c
 endif
 
 include ../../Makefile.lib.inc
