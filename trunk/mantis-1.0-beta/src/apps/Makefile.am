@@ -1,5 +1,5 @@
 
-SUBDIRS = blink_led flash_test msgs_test
+SUBDIRS = blink_led flash_test msgs_test dev_test
 
 if ARCH_MICRO
 SUBDIRS += blink_led led_example printf_example 

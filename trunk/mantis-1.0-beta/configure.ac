@@ -238,6 +238,7 @@ AC_CONFIG_FILES([
 	  src/mos/com/Makefile
 	  src/mos/dev/Makefile
 	  src/apps/Makefile	
+	  src/apps/dev_test/Makefile
 	  src/apps/load_an_elf/Makefile
 	  src/apps/blink_led/Makefile
 	  src/apps/led_example/Makefile

@@ -141,7 +141,7 @@ m4trace:configure.ac:1: -1- AC_SUBST_TRACE([target_alias])
 m4trace:configure.ac:1: -1- m4_pattern_allow([^target_alias$])
 m4trace:configure.ac:2: -1- AM_INIT_AUTOMAKE([mos], [0.9])
 m4trace:configure.ac:2: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
-m4trace:configure.ac:2: -1- AM_AUTOMAKE_VERSION([1.10.2])
+m4trace:configure.ac:2: -1- AM_AUTOMAKE_VERSION([1.10.1])
 m4trace:configure.ac:2: -1- AC_REQUIRE_AUX_FILE([install-sh])
 m4trace:configure.ac:2: -1- AC_SUBST([INSTALL_PROGRAM])
 m4trace:configure.ac:2: -1- AC_SUBST_TRACE([INSTALL_PROGRAM])
@@ -232,6 +232,11 @@ m4trace:configure.ac:11: -1- _AM_SUBST_NOTMAKE([am__isrc])
 m4trace:configure.ac:11: -1- AC_SUBST([CYGPATH_W])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([CYGPATH_W])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^CYGPATH_W$])
+m4trace:configure.ac:11: -1- _m4_warn([obsolete], [The macro `AC_FOREACH' is obsolete.
+You should run autoupdate.], [../../lib/autoconf/general.m4:196: AC_FOREACH is expanded from...
+aclocal.m4:706: _AM_SET_OPTIONS is expanded from...
+aclocal.m4:432: AM_INIT_AUTOMAKE is expanded from...
+configure.ac:11: the top level])
 m4trace:configure.ac:11: -1- AC_SUBST([PACKAGE], ['AC_PACKAGE_TARNAME'])
 m4trace:configure.ac:11: -1- AC_SUBST_TRACE([PACKAGE])
 m4trace:configure.ac:11: -1- m4_pattern_allow([^PACKAGE$])
@@ -965,7 +970,7 @@ m4trace:configure.ac:219: -1- m4_pattern_allow([^USB_SERIAL$])
 m4trace:configure.ac:219: -1- AH_OUTPUT([USB_SERIAL], [/* default to using the USB-serial converter */
 #undef USB_SERIAL])
 m4trace:configure.ac:222: -1- _m4_warn([obsolete], [The macro `AM_CONFIG_HEADER' is obsolete.
-You should run autoupdate.], [aclocal.m4:416: AM_CONFIG_HEADER is expanded from...
+You should run autoupdate.], [aclocal.m4:405: AM_CONFIG_HEADER is expanded from...
 configure.ac:222: the top level])
 m4trace:configure.ac:222: -1- AC_CONFIG_HEADERS([config.h])
 m4trace:configure.ac:224: -1- AC_CONFIG_FILES([
@@ -985,6 +990,7 @@ m4trace:configure.ac:224: -1- AC_CONFIG_FILES([
 	  src/mos/com/Makefile
 	  src/mos/dev/Makefile
 	  src/apps/Makefile	
+	  src/apps/dev_test/Makefile
 	  src/apps/load_an_elf/Makefile
 	  src/apps/blink_led/Makefile
 	  src/apps/led_example/Makefile
@@ -999,19 +1005,19 @@ m4trace:configure.ac:224: -1- AC_CONFIG_FILES([
 	  src/tools/cortex/Makefile
 	  src/tools/logview/Makefile
 	  ])
-m4trace:configure.ac:256: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
-m4trace:configure.ac:256: -1- m4_pattern_allow([^LIB@&t@OBJS$])
-m4trace:configure.ac:256: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([LTLIBOBJS])
-m4trace:configure.ac:256: -1- m4_pattern_allow([^LTLIBOBJS$])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([top_builddir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([srcdir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([abs_srcdir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([top_srcdir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([abs_top_srcdir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([builddir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([abs_builddir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([abs_top_builddir])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([INSTALL])
-m4trace:configure.ac:256: -1- AC_SUBST_TRACE([MKDIR_P])
+m4trace:configure.ac:257: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
+m4trace:configure.ac:257: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:257: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([LTLIBOBJS])
+m4trace:configure.ac:257: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([top_builddir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([srcdir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([abs_srcdir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([top_srcdir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([abs_top_srcdir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([builddir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([abs_builddir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([abs_top_builddir])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([INSTALL])
+m4trace:configure.ac:257: -1- AC_SUBST_TRACE([MKDIR_P])
