@@ -227,10 +227,7 @@ AC_CONFIG_FILES([
 	  src/lib/Makefile
 	  src/mos/Makefile
 	  src/mos/kernel/Makefile
-	  src/mos/kernel/avr/Makefile
-	  src/mos/kernel/avr/boot/Makefile
 	  src/mos/kernel/msp430/Makefile
-	  src/mos/kernel/micro/Makefile     
 	  src/mos/kernel/linux/Makefile
 	  src/mos/sys/Makefile
 	  src/mos/share/Makefile
