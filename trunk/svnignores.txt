@@ -1,0 +1,6 @@
+# exclude any backup file
+*~
+*.*~
+
+# exclude auto-generated .in files (from autotools)
+*.in
