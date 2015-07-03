@@ -1,0 +1,1 @@
+This project aims at defining a suitable mechanism to dynamically add new functionalities to the TelosB wireless module. A dynamic linker is required to cope with space and time constraints. Serial and radio interface will be provided to connecto to TelosB module, using Mantis OS support.
